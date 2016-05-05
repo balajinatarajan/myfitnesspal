@@ -7,6 +7,10 @@ function setCookie(cname, cvalue, months) {
                   + ";domain=." + window.location.hostname +";path=/";
 }
 
+function updateCookie(cname, cvalue) {
+    document.cookie = cname +"=" + cvalue;
+}
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -32,6 +36,8 @@ function updateView(startdate) {
     var today = new Date();
     var diffInDays = Math.floor((today-startdate)/(1000*60*60*24));
     if(diffInDays >= 0 && diffInDays < data.length) {
+        var completePercent = Math.ceil((diffInDays/data.length)*100);
+        $('.progress').html('<div class="progress-bar" role="progressbar" aria-valuenow="'+completePercent+'" aria-valuemin="0" aria-valuemax="'+data.length+'" style="width:'+completePercent+'%">'+completePercent+'%</div>');
         $("#today h1").html(data[diffInDays]);
         $("#tomorrow h4").html(data[diffInDays+1]);
         if(diffInDays !=0) {
@@ -67,7 +73,7 @@ $(document).ready(function(){
     
     $("#setstartdate").click(function(){
         $(".navbar-collapse").removeClass("in");
-        setCookie("startdate",parseDate($("#startdateinput").val()), 12); 
+        updateCookie("startdate",parseDate($("#startdateinput").val())); 
         updateView(parseDate($("#startdateinput").val()));
     });
 });
