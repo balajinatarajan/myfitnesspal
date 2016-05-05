@@ -66,6 +66,7 @@ $(document).ready(function(){
     }
     
     $("#setstartdate").click(function(){
+        $(".navbar-collapse").removeClass("in");
         setCookie("startdate",parseDate($("#startdateinput").val()), 12); 
         updateView(parseDate($("#startdateinput").val()));
     });
