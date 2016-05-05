@@ -30,7 +30,7 @@ function updateView(startdate) {
     $("#view").addClass("hide"); 
     
     var today = new Date();
-    var diffInDays = Math.round((today-startdate)/(1000*60*60*24));
+    var diffInDays = Math.floor((today-startdate)/(1000*60*60*24));
     if(diffInDays >= 0 && diffInDays < data.length) {
         $("#today h1").html(data[diffInDays]);
         $("#tomorrow h4").html(data[diffInDays+1]);
