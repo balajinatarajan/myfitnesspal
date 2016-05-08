@@ -9,6 +9,7 @@
 		tmpl_cache: false,
         display_week_numbers: false,
         weekbox:false,
+        format12:true,
 		onAfterEventsLoad: function(events) {
 			if(!events) {
 				return;
