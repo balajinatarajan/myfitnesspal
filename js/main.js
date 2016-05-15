@@ -40,6 +40,11 @@ function updateView(startdate) {
         $('.progress').html('<div class="progress-bar" role="progressbar" aria-valuenow="'+completePercent+'" aria-valuemin="0" aria-valuemax="'+data.length+'" style="width:'+completePercent+'%">'+completePercent+'%</div>');
         $("#today h1").html(data[diffInDays]);
         $("#tomorrow h4").html(data[diffInDays+1]);
+        var next5days = '';
+        for(i=diffInDays+1;i<(data.length > diffInDays+6 ? diffInDays+6 : data.length);i++){
+            next5days += data[i] + ", ";
+        }
+        $("#next5days h4").html(next5days);
         if(diffInDays !=0) {
             $("#yesterday h4").html(data[diffInDays-1]);
             $("#yesterday").removeClass("hide");
