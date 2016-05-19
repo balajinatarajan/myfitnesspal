@@ -28,8 +28,8 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">Set Start Date</a></li>
-                <li class=""><a href="/myfitnesspal/schedule.html">Schedule</a></li>
-                <li class=""><a href="/myfitnesspal/about.html">About</a></li>
+                <!--li class=""><a href="/myfitnesspal/schedule.html">Schedule</a></li-->
+                <!--li class=""><a href="/myfitnesspal/about.html">About</a></li-->
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -43,7 +43,13 @@
                     <h1>Speed 1.0</h1>
                     <!--p><a class="btn btn-primary btn-lg" href="#" role="button">Done</a></p-->
                     <br><p>Total Progress</p>
-                    <div class="progress"></div>
+                    <div class="progress" id="totalprogress"></div>
+                    <div class="row">
+                        <div class="col col-md-4">ALPHA <div class="progress" id="alphaprogress"></div></div>
+                        <div class="col col-md-4">BETA <div class="progress" id="betaprogress"></div></div>
+                        <div class="col col-md-4">GAMMA <div class="progress" id="gammaprogress"></div></div>
+                    </div>
+                    
                 </div>
                 <div id="tomorrow" class="">
                     <p>Tomorrow</p>
