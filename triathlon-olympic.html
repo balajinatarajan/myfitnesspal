@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		
+        
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/cosmo/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/myfitnesspal/css/main.css">
+	</head>
+	<body>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">My Fitness Pal</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Set Start Date</a></li>
+                <!--li class=""><a href="/myfitnesspal/schedule.html">Schedule</a></li-->
+                <!--li class=""><a href="/myfitnesspal/about.html">About</a></li-->
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container">
+            <div id="workout-complete-alert" class="hide alert alert-success" role="alert">You nailed the workout! All of it! <a href="#" data-toggle="modal" data-target="#myModal">Click here</a> to set the start date and do it all over again.</div>
+            <div id="workout-not-started-alert" class="hide alert alert-warning" role="alert">Your workout has not started yet. <a href="#" data-toggle="modal" data-target="#myModal">Click here</a> to update the start date.</div>
+            <div id="view" class="hide">
+                <div id="today" class="jumbotron">
+                    <p>Today</p>
+                    <h1></h1>
+                    <!--p><a class="btn btn-primary btn-lg" href="#" role="button">Done</a></p-->
+                    <br><p>Total Progress</p>
+                    <div class="progress" id="totalprogress"></div>
+                    
+                </div>
+                <div id="tomorrow" class="">
+                    <p>Tomorrow</p>
+                    <h4></h4>
+                </div>
+                <div id="yesterday" class="hide">
+                    <p>Yesterday</p>
+                    <h4></h4>
+                </div>
+                <div id="next5days" class="">
+                    <p>Next 5 days</p>
+                    <h4></h4>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Set Starting Date</h4>
+              </div>
+              <div class="modal-body">
+                <p>Let us know when you will start the workout (You can also set a past date if your workout schedule is in progress)</p>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon" id="datefield">Start Date</span>
+                  <input id="startdateinput" type="date" class="form-control" placeholder="mm/dd/yyyy" aria-describedby="datefield">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="setstartdate" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="/myfitnesspal/js/data/tri-olympic.js"></script>
+        <script src="/myfitnesspal/js/tri.js"></script>
+		<script type="text/javascript">
+	
+		</script>
+	</body>
+</html>
