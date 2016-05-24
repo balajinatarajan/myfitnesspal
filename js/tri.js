@@ -72,7 +72,7 @@ function parseDate(str) {
 }
 
 $(document).ready(function(){
-    var startdate = getCookie("triostartdate");
+    var startdate = getCookie(cookiename);
 
     if(startdate == ""){
         $('#myModal').modal();
@@ -82,7 +82,7 @@ $(document).ready(function(){
     
     $("#setstartdate").click(function(){
         $(".navbar-collapse").removeClass("in");
-        updateCookie("triostartdate",parseDate($("#startdateinput").val())); 
+        updateCookie(cookiename,parseDate($("#startdateinput").val())); 
         updateView(parseDate($("#startdateinput").val()));
     });
 });
