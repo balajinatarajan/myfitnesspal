@@ -10,7 +10,7 @@ function setCookie(cname, cvalue, months) {
 }
 
 function updateCookie(cname, cvalue) {
-    document.cookie = cname +"=" + cvalue;
+    setCookie(cname,cvalue,12);
 }
 
 function getCookie(cname) {
